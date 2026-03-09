@@ -37,6 +37,11 @@ This is the documentation guide for Delta UEFN's Escape From Tsunami template. A
 6) Now, click on the “feature example” category, A new template called “TsunamiTemplate”
 should appear, click on it and create the project. And then, you should now have access to the project!
 
+## Known issue /!\
+
+![collection](images/collection.png)<br>
+If you encounter errors related to scoped variables, simply replace the name between {} with your project name.
+
 
 
 ![Entities](images/entities.png)<br>
