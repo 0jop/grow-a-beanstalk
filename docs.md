@@ -22,6 +22,23 @@
 ## Overview
 This is the documentation guide for Delta UEFN's Escape From Tsunami template. Almost everything is handled in Scene Graph, except for a single Verse device used to handle player spawning more effectively. In this setup guide we'll explain how you can customize the template to your liking, and most important of all; set up your own characters.
 
+## How to install template?
+
+1) Open the folder where Fortnite is installed. And open “FortniteGame” folder
+
+2) Create a new folder called “VKTemplates”, And open it
+
+3) Inside the “VKTemplates” folder, Create a new folder called “Basic”, and open it
+
+4)  Drag the “TsunaliTemplate” folder into it
+
+5) Open UEFN Editor
+
+6) Now, click on the “feature example” category, A new template called “TsunamiTemplate”
+should appear, click on it and create the project. And then, you should now have access to the project!
+
+
+
 ![Entities](images/entities.png)<br>
 The main thing to remember is that the `Entities.EP_Game` file is the "main" game handler. This is an entity prefab, which means it's different from an entity placed down on the map. If you open this, you'll see the main mechanics of our game, like the live event, different buttons etc. If you want to make changes to the mesh for the keypad button for example, make sure to change it in the `Entities.EP_Keypad` prefab, and it will automatically change everywhere. Similarly, if you want to make changes to how the slots look, don't change it in the EP_Base, but in the EP_Slot prefab. This is because you should always change the most "specific" prefab so others that use this will be updated automatically. 
 
