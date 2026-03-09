@@ -30,7 +30,7 @@ This is the documentation guide for Delta UEFN's Escape From Tsunami template. A
 
 3) Inside the “VKTemplates” folder, Create a new folder called “Basic”, and open it
 
-4)  Drag the “TsunaliTemplate” folder into it
+4)  Drag the “TsunamiTemplate” folder into it
 
 5) Open UEFN Editor
 
@@ -38,12 +38,11 @@ This is the documentation guide for Delta UEFN's Escape From Tsunami template. A
 should appear, click on it and create the project. And then, you should now have access to the project!
 
 ## Known issue /!\
-
-![collection](images/collection.png)<br>
+![known_issue](images/known_issue.png)<br>
 If you encounter errors related to scoped variables, simply replace the name between {} with your project name.
 
 
-
+## Entities
 ![Entities](images/entities.png)<br>
 The main thing to remember is that the `Entities.EP_Game` file is the "main" game handler. This is an entity prefab, which means it's different from an entity placed down on the map. If you open this, you'll see the main mechanics of our game, like the live event, different buttons etc. If you want to make changes to the mesh for the keypad button for example, make sure to change it in the `Entities.EP_Keypad` prefab, and it will automatically change everywhere. Similarly, if you want to make changes to how the slots look, don't change it in the EP_Base, but in the EP_Slot prefab. This is because you should always change the most "specific" prefab so others that use this will be updated automatically. 
 
