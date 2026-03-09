@@ -18,6 +18,7 @@
   - [Making changes to the UI](#making-changes-to-the-ui)
   - [Using Asicson's dynamic material](#using-asicsons-dynamic-material)
   - [Adding new base skins](#adding-new-base-skins)
+  - [Adding new live event material](#adding-new-live-event-material)
 
 
 ## Overview
