@@ -38,9 +38,13 @@ This is the documentation guide for Delta UEFN's Escape From Tsunami template. A
 should appear, click on it and create the project. And then, you should now have access to the project!
 
 ## Known issue /!\
+![verse_error](images/verse_error.png)<br>
+Upon opening the project for the first time, you will see errors related to Verse. Simply click `Open VS Code`, and then in VS Code click `Ctrl + Shift + F` which will take you to the search menu.
 ![known_issue](images/known_issue.png)<br>
-If you encounter errors related to scoped variables, simply replace the name between {} with your project name.
+The errors are related to some variables and constants scoped at the project level, because of issues with certain materials. 
 
+![replace_references](images/replace_all.png)<br>
+To fix this, type in the top box `TsunamiTemplateNoChar`, and in the bottom box your project name. Then click the `Replace All` button. After this close out of VS Code, and click the blue `Rebuild` button. If you still have invisible bases or any similar issues, close and open the map.
 
 ## Entities
 ![Entities](images/entities.png)<br>
