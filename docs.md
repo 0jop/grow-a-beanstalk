@@ -54,7 +54,7 @@ Because we use Scene Graph for the characters, they will need to have animated t
 - [Make Custom Characters in Fortnite UEFN! - Map Academy ](https://www.youtube.com/watch?v=0YPwd0d9fwo)
 </ul>
 
-After you have your static meshes, go into the Characters folder and find the `EP_Character_Base` entity prefab. Duplicate this and change the static mesh to your character's mesh. If you can't locate your character's mesh make sure to build Verse code first. Make sure all of the characters' individual material instances are parented by the `MakeAnim` material. This is used for the different collections.<br>
+After you have your static meshes, go into the Characters folder and find the `EP_Example1` entity prefab. Duplicate this and change the static mesh to your character's mesh. If you can't locate your character's mesh make sure to build Verse code first. Make sure all of the characters' individual material instances are parented by the `MakeAnim` material. This is used for the different collections.<br>
 
 Then, open the Verse project in VS code to change the setup of the characters. We decided to do it this way, as it is easier to change the characters and sort them in a code editor, rather than a Verse device or Scene Graph component. Open the `Scripts.GameCharacters.Instances.uncommon_characters.verse` file. In here, you'll see the characters we have already set up, and theoretically you can just change the names, the entity prefab and the texture. Here you can also change the base money/s and the weight of this character within its rarity.
 
