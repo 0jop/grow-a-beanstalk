@@ -30,7 +30,7 @@ This is the documentation guide for Delta UEFN's Escape From Tsunami template. A
 
 3) Inside the “VKTemplates” folder, Create a new folder called “Basic”, and open it
 
-4)  Drag the “TsunamiTemplate” folder into it
+4)  Drag the “BeanstalkTemplate” folder into it
 
 5) Open UEFN Editor
 
