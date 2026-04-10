@@ -1,6 +1,6 @@
 
 ![header](images/header.png)<br>
-# Escape From Tsunami Template
+# Grow A Beanstalk Template
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@
 
 
 ## Overview
-This is the documentation guide for Delta UEFN's Escape From Tsunami template. Almost everything is handled in Scene Graph, except for a single Verse device used to handle player spawning more effectively. In this setup guide we'll explain how you can customize the template to your liking, and most important of all; set up your own characters.
+This is the documentation guide for Delta UEFN's Grow A Beanstalk template. Almost everything is handled in Scene Graph, except for a single Verse device used to handle player spawning more effectively. In this setup guide we'll explain how you can customize the template to your liking, and most important of all; set up your own characters.
 
 ## How to install template?
 
@@ -34,7 +34,7 @@ This is the documentation guide for Delta UEFN's Escape From Tsunami template. A
 
 5) Open UEFN Editor
 
-6) Now, click on the “feature example” category, A new template called “TsunamiTemplate”
+6) Now, click on the "feature example" category, A new template called "BeanstalkTemplate"
 should appear, click on it and create the project. And then, you should now have access to the project!
 
 ## Known issue /!\
@@ -44,7 +44,7 @@ Upon opening the project for the first time, you will see errors related to Vers
 The errors are related to some variables and constants scoped at the project level, because of issues with certain materials. 
 
 ![replace_references](images/replace_all.png)<br>
-To fix this, type in the top box `TsunamiTemplateNoChar`, and in the bottom box your project name. Then click the `Replace All` button. After this close out of VS Code, and click the blue `Rebuild` button. If you still have invisible bases or any similar issues, close and open the map.
+To fix this, type in the top box `BeanstalkTemplateNoChar`, and in the bottom box your project name. Then click the `Replace All` button. After this close out of VS Code, and click the blue `Rebuild` button. If you still have invisible bases or any similar issues, close and open the map.
 
 ## Entities
 ![Entities](images/entities.png)<br>
@@ -143,7 +143,7 @@ So, here's how a line in this list is supposed to be constructed:
 
 ## Create a new instance of the base skin material
 ![base_skin](images/create_new_base_skin_instance.png)<br>
-To create a new instance of the base skin material, you must go to this path: `TsunamiTemplate > Meshes > BaseMeshes > MaterialInstances` (*1). Once you have navigated to this path, you can view the material instances that we have already prefabricated. To create a new one, simply right-click (*2) on one of the existing materials and then create a material instance.
+To create a new instance of the base skin material, you must go to this path: `BeanstalkTemplate > Meshes > BaseMeshes > MaterialInstances` (*1). Once you have navigated to this path, you can view the material instances that we have already prefabricated. To create a new one, simply right-click (*2) on one of the existing materials and then create a material instance.
 
 ## Customize a base skin material
 Once your material instance has been created, double-click on it to open it.
@@ -162,7 +162,7 @@ To do this, simply check the `ENABLE TO USE CUSTOM COLOR / TEXTURE` parameter. O
 To set up live events, find the `live_event_component` in the EP_Game instance. Here you can change the updated weights during the event, the event duration, interval and material.
 
 ## Adding new live event material
-In the same way as creating a new instance of a base skin, go to this path: `TsunamiTemplate.Meshes.World.Landscape`
+In the same way as creating a new instance of a base skin, go to this path: `BeanstalkTemplate.Meshes.World.Landscape`
 Here you can view the materials we have prefabricated. To create a new one, simply create a new instance of `M_BaseMat`.
 
 ![landscape_skin](images/create_new_landscape_instance.png)<br>
