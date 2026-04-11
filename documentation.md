@@ -86,7 +86,9 @@ To change the color displayed on each character open MakeAnim material mentioned
 
 ## Changing prize wheel
 ![prize_wheel](images/prize_wheel.png)<br>
-To set up live events, find the `EP_Game` in the outliner (so this is the instance, not the prefab in content browser), and find the `EP_Prize_Wheel` prefab in here. In its `prize_wheel_manager_component` you can set up the different weights and rewards. To change the look of the wheel, simply open the prefab for the `EP_Live_Event` and change the materials used. To make a new material like the ones we have, simply make a material instance of one of the other materials and update the texture, icon and colors. 
+To set up prize wheel, find the `EP_Game` in the outliner (so this is the instance, not the prefab in content browser), and find the `EP_Prize_Wheel` prefab in here. In its `prize_wheel_ui_component` you can set up the different weights and rewards. Do not change the value of `AnimIndex` it is used to determine which animation to play in `WBP_WheelSpin`. To change the look of the wheel, simply open the prefab for the `EP_Live_Event` and change the materials used. To make a new material like the ones we have, simply make a material instance of one of the other materials and update the texture, icon and colors. If you want to change the wheel's appearance in the UI, the widget is located in `WBP > WheelSpin > WBP_WheelSpin`.To change the content of the wheel UI, simply open the material instance located in `Meshes > Wheel > MI_SpinWheel_Candy`, double-click on it, and you can customize each slot on the wheel however you like. Here is an image showing the corresponding slot numbers.
+![prize_wheel](images/prize_wheel_material_instance.png)
+
 >Note that changing these settings in the prefab will change it for all instances/spawned of the prefab, and changing it in the editor will change it for that one only. 
 
 ## Adding new audio effects
@@ -151,6 +153,8 @@ Once your material instance has been created, double-click on it to open it.
 Here is how the UVs of the base mesh are composed, and this applies to all three levels of the base (see photo below).
 ![base_skin](images/UV.png)<br>
 
+> Note. It's not the same mesh, and the material has changed a bit, but the basic concept remains the same!
+
 Once you understand how the system works, it is easier to understand how the material instance parameters work.
 Thanks to this material, you will be able to change the color for numbers 1, 2, 4, and 5, or even add an animated texture of your choice.
 To do this, simply check the `ENABLE TO USE CUSTOM COLOR / TEXTURE` parameter. Once this parameter is enabled, you must enable either `UseColor` and set the value to `1.0` if you want to use a single color, or `UseTexture` and also set the value to `1.0` if you want to use a texture. When you enable these parameters, the texture on the square where the mesh UVs are mapped is replaced by the one you added.
@@ -161,11 +165,27 @@ To do this, simply check the `ENABLE TO USE CUSTOM COLOR / TEXTURE` parameter. O
 ![live_event](images/live_event.png)<br>
 To set up live events, find the `live_event_component` in the EP_Game instance. Here you can change the updated weights during the event, the event duration, interval and material.
 
+
+![live_event](images/live_event_comparison.png)<br>
+To set up props and other elements to customize your Live Event, you need the following for each event: two Cinematic Sequence Devices one to load the elements and another to unload them. 
+![live_event](images/cinematic_sequence_devices.png)
+Each Cinematic Sequence Device plays a sequence when activated.
+![live_event](images/level_sequence.png)
+In the case of my image, it’s LS_CandyLoad. What it does is very simple: it simply loads a Data Layer containing all the props and objects you want to make visible during your event. To add objects to the Data Layer, simply select the object you want to include, then open the Data Layers menu, right-click on, for example, DL_Candy, and select “Add Selected Actor(s) to Selected Data Layer(s).” 
+![live_event](images/add_selected_actors.png)
+
+If you're unsure, here's a video from "Howtwoboss" explaining how data layers work. [The SECRET to Lower Memory in Fortnite Creative/UEFN! (Data Layers) - Howtwoboss](https://www.youtube.com/watch?v=YBEGy58Fj00)
+
+> If you can't find the Data Layers menu, you can enable it from here. ![live_event](images/enable_data_layer_window.png)
+
+
+
 ## Adding new live event material
 In the same way as creating a new instance of a base skin, go to this path: `BeanstalkTemplate.Meshes.World.Landscape`
 Here you can view the materials we have prefabricated. To create a new one, simply create a new instance of `M_BaseMat`.
 
 ![landscape_skin](images/create_new_landscape_instance.png)<br>
+> Note. The image comes from our other template, but the path is the same
 
 Once the instance has been created, you can double-click to open it and you will find these parameters:
 
